@@ -3,11 +3,20 @@
     <h2>All our flats</h2>
   </div>
   <div class="row">
-  <ul class="list-group list-inline d-flex">
     <% @flats.each do |flat| %>
-      <li class="card"><%= flat.name %>
-      <p><%= flat.description %></p>
-      </li>
+    <div class="row col-3">
+      <div class="card flat-card h-100 rounded shadow">
+        <div class="flat-card-content">
+          <img src="https://loremflickr.com/320/240/city" class="card-img-top" alt="...">
+          <div class="flat-card-title mb-3 mt-2">
+            <h4><%= flat.name %></h4>
+          </div>
+          <div class="flat-card-description">
+            <%= flat.description %>
+          </div>
+        </div>
+      </div>
+    </div>
     <% end %>
   </div>
 </div>
