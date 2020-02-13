@@ -9,11 +9,13 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
 
   <body>
-    <div class="navbar sticky-top navbar-expand-lg navbar-light bg-white">
+    <div class="navbar sticky-top navbar-expand-lg navbar-light bg-white d-flex justify-content-between">
       <a class="navbar-brand" href="http://localhost:3000/flats">Simple Airbnb</a>
+      <%= link_to 'Add a flat', new_flat_path %>
     </div>
     <%= yield %>
   </body>
